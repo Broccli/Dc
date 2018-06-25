@@ -2,19 +2,19 @@
   <v-layout>
     <v-card contextual-style="dark">
       <span slot="header">
-        Login
+        Calculator
       </span>
       <div slot="body">
         <form @submit.prevent="login(user)">
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-envelope fa-fw"></i>
+                <i class="fa fa-map-marker fa-fw"></i>
               </div>
               <input
                 v-model="user.email"
                 type="email"
-                placeholder="Email"
+                placeholder="Entar a loction"
                 class="form-control"
               >
             </div>
@@ -22,26 +22,32 @@
           <div class="form-group">
             <div class="input-group">
               <div class="input-group-addon">
-                <i class="fa fa-lock fa-fw"></i>
+                <i class="fa fa-map fa-fw"></i>
               </div>
               <input
                 v-model="user.password"
                 type="password"
-                placeholder="Password"
+                placeholder="Enter a location"
                 class="form-control"
               >
             </div>
           </div>
           <div class="form-group">
-            <button class="btn btn-outline-primary">
-              Login
+            <button class="btn btn-outline-primary" style="">
+              Calculate
             </button>
           </div>
         </form>
-      </div>
-      <div slot="footer">
-        No account?
-        <router-link :to="{ name: 'register.index' }">Register</router-link>
+        <div>
+          <ul class="list-group">
+            <li class="list-group-item">Distance In Mile:</li>
+            <li class="list-group-item">Distance In Kilo:</li>
+            <li class="list-group-item">In Min:</li>
+            <li class="list-group-item">From:</li>
+            <li class="list-group-item">To:</li>
+          </ul>
+        </div>
+
       </div>
     </v-card>
   </v-layout>
